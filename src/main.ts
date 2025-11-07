@@ -2,13 +2,13 @@ import "./style.css";
 import { SelectionManager } from "./ui-utils.js";
 import { EvaluationManager } from "./evaluation-manager.js";
 
-// Type definition for a 2D point coordinate
+
 export interface Point {
   x: number;
   y: number;
 }
 
-// Type definition for a detected shape with metadata
+
 export interface DetectedShape {
   type: "circle" | "triangle" | "rectangle" | "pentagon" | "star";
   confidence: number;
@@ -22,7 +22,7 @@ export interface DetectedShape {
   area: number;
 }
 
-// Type definition for the complete detection result
+
 export interface DetectionResult {
   shapes: DetectedShape[];
   processingTime: number;
@@ -30,7 +30,7 @@ export interface DetectionResult {
   imageHeight: number;
 }
 
-// Main shape detection class using computer vision techniques
+
 export class ShapeDetector {
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
